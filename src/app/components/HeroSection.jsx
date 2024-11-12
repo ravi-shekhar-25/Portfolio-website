@@ -41,7 +41,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Computer Science and Engineering Undergraduate from Rajiv Gandhi Institute of Petroleum Technology <b>(An Institute of National Importance)</b>.
+            Computer Science and Engineering Undergraduate from Rajiv Gandhi Institute of Petroleum Technology <b>(An Institute of National Importance along the lines of IITs)</b>.
           </p>
           <div>
             <Link
@@ -51,7 +51,7 @@ const HeroSection = () => {
               Message Me
             </Link>
             <Link
-              href="/"
+              href="https://drive.google.com/file/d/1JKUH3ELGY3PGL2Hux32TSXEQ7oV6Lw-9/view?usp=drivesdk"
               className="px-1 inline-block py-1 w-full sm:w-fit rounded-full bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-800 text-white mt-3"
             >
               <span className="block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2">
@@ -78,16 +78,16 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="px-4 py-7 socials flex flex-row gap-2">
-          <Link href="github.com">
+          <Link href="https://github.com/ravi-shekhar-25">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="linkedin.com">
+          <Link href="www.linkedin.com/in/ravi-shekhar25">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
-          <Link href="instagram.com">
+          <Link href="https://www.instagram.com/shekhar_025/">
             <Image src={InstagramIcon} alt="Instagram Icon" />
           </Link>
-          <Link href="facebook.com">
+          <Link href="https://www.facebook.com/profile.php?id=100087018645883">
             <Image src={FacebookIcon} alt="Facebook Icon" />
           </Link>
         </div>
