@@ -1,7 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
+import GithubIcon from "../../../public/github.svg";
+import LinkedinIcon from "../../../public/linkedin.svg";
+import InstagramIcon from "../../../public/instagram.svg";
+import FacebookIcon from "../../../public/facebook.svg";
+import TwitterIcon from "../../../public/twitter.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -59,8 +62,17 @@ const EmailSection = () => {
           <Link href="https://github.com/ravi-shekhar-25 ">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="www.linkedin.com/in/ravi-shekhar25">
+          <Link href="https://www.linkedin.com/in/ravi-shekhar25/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
+          </Link>
+          <Link href="https://www.instagram.com/shekhar_025/">
+            <Image src={InstagramIcon} alt="Facebook Icon" />
+          </Link>
+          <Link href="https://www.facebook.com/profile.php?id=100087018645883">
+            <Image src={FacebookIcon} alt="Facebook Icon" />
+          </Link>
+          <Link href="https://twitter.com/RaviShekhar_025">
+            <Image src={TwitterIcon} alt="Twitter Icon" />
           </Link>
         </div>
       </div>

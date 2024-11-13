@@ -3,10 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import GithubIcon from "../../../public/github-icon.svg";
-import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import InstagramIcon from "../../../public/instagram-icon.svg";
-import FacebookIcon from "../../../public/facebook-icon.svg";
+import GithubIcon from "../../../public/github.svg";
+import LinkedinIcon from "../../../public/linkedin.svg";
+import InstagramIcon from "../../../public/instagram.svg";
+import FacebookIcon from "../../../public/facebook.svg";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -81,7 +81,7 @@ const HeroSection = () => {
           <Link href="https://github.com/ravi-shekhar-25">
             <Image src={GithubIcon} alt="Github Icon" />
           </Link>
-          <Link href="www.linkedin.com/in/ravi-shekhar25">
+          <Link href="https://www.linkedin.com/in/ravi-shekhar25/">
             <Image src={LinkedinIcon} alt="Linkedin Icon" />
           </Link>
           <Link href="https://www.instagram.com/shekhar_025/">
