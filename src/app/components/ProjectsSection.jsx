@@ -11,8 +11,8 @@ const projectsData = [
     description: "A detailed portfolio platform showcasing all my works",
     image: "/images/project-1.png",
     tag: ["All", "Web"],
-    gitUrl: "https://github.com/ravi-shekhar-25/Personal-Webpage",
-    previewUrl: "https://github.com/ravi-shekhar-25/Personal-Webpage",
+    gitUrl: "https://github.com/ravi-shekhar-25/Portfolio-website",
+    previewUrl: "https://github.com/ravi-shekhar-25/Portfolio-website",
   },
   {
     id: 2,
