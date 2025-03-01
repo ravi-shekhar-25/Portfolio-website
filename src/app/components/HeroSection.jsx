@@ -3,10 +3,10 @@ import React from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import GithubIcon from "../../../public/github.svg";
-import LinkedinIcon from "../../../public/linkedin.svg";
-import InstagramIcon from "../../../public/instagram.svg";
-import FacebookIcon from "../../../public/facebook.svg";
+import GithubIcon from "../../../public/assets/github.svg";
+import LinkedinIcon from "../../../public/assets/linkedin.svg";
+import InstagramIcon from "../../../public/assets/instagram.svg";
+import FacebookIcon from "../../../public/assets/facebook.svg";
 import Link from "next/link";
 
 const HeroSection = () => {
