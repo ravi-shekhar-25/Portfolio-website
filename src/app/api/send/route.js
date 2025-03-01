@@ -19,7 +19,7 @@ export async function POST(req) {
         const mailOptions = {
             from: email, // Sender (user who filled the form)
             to: process.env.TO_EMAIL, // Your email
-            name: `New Contact Form Submission: ${name}`,
+            subject: `New Contact Form Submission: ${name}`,
             text: `You received a new message from ${email}.\n\nMessage:\n${message}`,
         };
 
