@@ -78,74 +78,74 @@ const EducationSection = () => {
   };
 
   return (
-    <section style={sectionStyle} id="education">
-      <h1 style={headingStyle}>
-        <i className="fas fa-graduation-cap"></i> My <span style={highlightStyle}>Education</span>
-      </h1>
+      <section style={sectionStyle} id="education">
+        <h1 style={headingStyle}>
+          <i className="fas fa-graduation-cap"></i> My <span style={highlightStyle}>Education</span>
+        </h1>
 
-      <p style={quoteStyle}>
-        Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.
-      </p>
+        <p style={quoteStyle}>
+          Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.
+        </p>
 
-      <div style={boxContainerStyle}>
-        {/* Education Item 1 */}
-        <div style={boxStyle}>
-          <div style={imageStyle}>
-            <Image
-              priority
-              src="/images/college.jpg"
-              alt="Rajiv Gandhi Institute of Petroleum Technology"
-              width={250}
-              height={250}
-              style={{ borderRadius: "8px", objectFit: "cover" }}
-            />
+        <div style={boxContainerStyle}>
+          {/* Education Item 1 */}
+          <div style={boxStyle}>
+            <div style={imageStyle}>
+              <Image
+                  priority
+                  src="/images/rgipt.jpeg"
+                  alt="Rajiv Gandhi Institute of Petroleum Technology"
+                  width={250}
+                  height={250}
+                  style={{ borderRadius: "8px", objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <h3 style={contentTitleStyle}>B.Tech In Computer Science And Engineering</h3>
+              <p style={contentSubtitleStyle}>Rajiv Gandhi Institute Of Petroleum Technology</p>
+              <p style={contentDateStyle}>2022-2026 | Pursuing</p>
+            </div>
           </div>
-          <div>
-            <h3 style={contentTitleStyle}>B.Tech In Computer Science And Engineering</h3>
-            <p style={contentSubtitleStyle}>Rajiv Gandhi Institute Of Petroleum Technology</p>
-            <p style={contentDateStyle}>2022-2026 | Pursuing</p>
+
+          {/* Education Item 2 */}
+          <div style={boxStyle}>
+            <div style={imageStyle}>
+              <Image
+                  priority
+                  src="/images/sen-sec-school.jpg"
+                  alt="Delhi Public School Ranchi - Intermediate"
+                  width={250}
+                  height={250}
+                  style={{ borderRadius: "8px", objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <h3 style={contentTitleStyle}>Intermediate | 93.6%</h3>
+              <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
+              <p style={contentDateStyle}>2020-2022 | Completed</p>
+            </div>
+          </div>
+
+          {/* Education Item 3 */}
+          <div style={boxStyle}>
+            <div style={imageStyle}>
+              <Image
+                  priority
+                  src="/images/sec-school.jpg"
+                  alt="Ramakrishna Mission Vidyapith - High School"
+                  width={250}
+                  height={350}
+                  style={{ borderRadius: "8px", objectFit: "cover" }}
+              />
+            </div>
+            <div>
+              <h3 style={contentTitleStyle}>High School | 97.2%</h3>
+              <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
+              <p style={contentDateStyle}>2018-2020 | Completed</p>
+            </div>
           </div>
         </div>
-
-        {/* Education Item 2 */}
-        <div style={boxStyle}>
-          <div style={imageStyle}>
-            <Image
-              priority
-              src="/images/school.jpg"
-              alt="Delhi Public School Ranchi - Intermediate"
-              width={250}
-              height={250}
-              style={{ borderRadius: "8px", objectFit: "cover" }}
-            />
-          </div>
-          <div>
-            <h3 style={contentTitleStyle}>Intermediate | 93.6%</h3>
-            <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
-            <p style={contentDateStyle}>2020-2022 | Completed</p>
-          </div>
-        </div>
-
-        {/* Education Item 3 */}
-        <div style={boxStyle}>
-          <div style={imageStyle}>
-            <Image
-              priority
-              src="/images/school.jpg"
-              alt="Delhi Public School Ranchi - High School"
-              width={250}
-              height={250}
-              style={{ borderRadius: "8px", objectFit: "cover" }}
-            />
-          </div>
-          <div>
-            <h3 style={contentTitleStyle}>High School | 97.2%</h3>
-            <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
-            <p style={contentDateStyle}>2018-2020 | Completed</p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
   );
 };
 
