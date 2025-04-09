@@ -1,16 +1,15 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, {useRef} from "react";
 import ProjectCard from "./ProjectCard";
-import ProjectTag from "./ProjectTag";
-import { motion, useInView } from "framer-motion";
+import {motion, useInView} from "framer-motion";
+import {ComputerDesktopIcon} from "@heroicons/react/24/outline";
 
 const projectsData = [
   {
     id: 1,
     title: "Personal Portfolio Website",
     description: "A detailed portfolio platform showcasing all my works",
-    image: "/images/project-1.png",
-    tag: ["All", "Web"],
+    image: "/images/Project-11.png",
     gitUrl: "https://github.com/ravi-shekhar-25/Portfolio-website",
     previewUrl: "https://github.com/ravi-shekhar-25/Portfolio-website",
   },
@@ -18,8 +17,7 @@ const projectsData = [
     id: 2,
     title: "Comprehensive Website for Farmers Need",
     description: "A unified digital portal offering essential resources, expert insights, and tools for modern farmers",
-    image: "/images/project-2.png",
-    tag: ["All", "Web"],
+    image: "/images/Project-12.png",
     gitUrl: "https://github.com/ravi-shekhar-25/Web-Technology-Project",
     previewUrl: "https://ravi-shekhar-25.github.io/Web-Technology-Project/",
   },
@@ -27,25 +25,32 @@ const projectsData = [
     id: 3,
     title: "Real-Estate Price Prediction",
     description: "A machine learning model to predict real estate prices based on various parameters",
+    image: "/images/Project-13.png",
+    gitUrl: "/",
+    previewUrl: "/",
+  },
+  {
+    id: 4,
+    title: "Real-Estate Price Prediction",
+    description: "A machine learning model to predict real estate prices based on various parameters",
     image: "/images/project-3.png",
-    tag: ["All", "Web"],
     gitUrl: "/",
     previewUrl: "/",
   },
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
+  // const [tag, setTag] = useState("All");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
-    setTag(newTag);
-  };
+  // const handleTagChange = (newTag) => {
+  //   setTag(newTag);
+  // };
 
-  const filteredProjects = projectsData.filter((project) =>
-      project.tag.includes(tag)
-  );
+  // const filteredProjects = projectsData.filter((project) =>
+  //     project.tag.includes(tag)
+  // );
 
   const cardVariants = {
     initial: { y: 50, opacity: 0 },
@@ -54,34 +59,40 @@ const ProjectsSection = () => {
 
   return (
       <section id="projects">
-        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-          My Projects
-        </h2>
-        <div className="text-white flex flex-row justify-center items-center gap-2 py-4">
-          <ProjectTag
-              onClick={handleTagChange}
-              name="All"
-              isSelected={tag === "All"}
-          />
-          <ProjectTag
-              onClick={handleTagChange}
-              name="Web"
-              isSelected={tag === "Web"}
-          />
-          <ProjectTag
-              onClick={handleTagChange}
-              name="Mobile"
-              isSelected={tag === "Mobile"}
-          />
+        <div className="w-full flex justify-center mt-8 mb-8 md:mb-12">
+          <div className="flex flex-row items-center gap-2">
+            <ComputerDesktopIcon className="size-10 text-blue-500"/>
+            <h2 className="text-center text-4xl font-bold text-white">
+              My Projects
+            </h2>
+          </div>
         </div>
-        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-          {filteredProjects.map((project, index) => (
+
+        {/*<div className="text-white flex flex-row justify-center items-center gap-2 py-4">*/}
+        {/*  <ProjectTag*/}
+        {/*      onClick={handleTagChange}*/}
+        {/*      name="All"*/}
+        {/*      isSelected={tag === "All"}*/}
+        {/*  />*/}
+        {/*  <ProjectTag*/}
+        {/*      onClick={handleTagChange}*/}
+        {/*      name="Web"*/}
+        {/*      isSelected={tag === "Web"}*/}
+        {/*  />*/}
+        {/*  <ProjectTag*/}
+        {/*      onClick={handleTagChange}*/}
+        {/*      name="Mobile"*/}
+        {/*      isSelected={tag === "Mobile"}*/}
+        {/*  />*/}
+        {/*</div>*/}
+        <ul ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          {projectsData.map((project, index) => (
               <motion.li
                   key={index}
                   variants={cardVariants}
                   initial="initial"
                   animate={isInView ? "animate" : "initial"}
-                  transition={{ duration: 0.3, delay: index * 0.4 }}
+                  transition={{duration: 0.3, delay: index * 0.4}}
               >
                 <ProjectCard
                     key={project.id}

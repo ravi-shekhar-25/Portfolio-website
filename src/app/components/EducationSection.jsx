@@ -1,6 +1,8 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
+import {AcademicCapIcon} from "@heroicons/react/24/outline";
 
 const EducationSection = () => {
   const sectionStyle = {
@@ -8,17 +10,6 @@ const EducationSection = () => {
     color: "#ffffff", // Dark text color
     padding: "2rem",
     textAlign: "center"
-  };
-
-  const headingStyle = {
-    fontSize: "2.5rem",
-    color: "#432b93", // Dark purple text color for heading
-    fontWeight: "bold",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    gap: "0.5rem",
-    marginBottom: "0.5rem"
   };
 
   const highlightStyle = {
@@ -79,12 +70,18 @@ const EducationSection = () => {
 
   return (
       <section style={sectionStyle} id="education">
-        <h1 style={headingStyle}>
-          <i className="fas fa-graduation-cap"></i> My <span style={highlightStyle}>Education</span>
-        </h1>
+        <div className="w-full flex justify-center mb-1">
+          <div className="flex flex-row items-center gap-2">
+            <AcademicCapIcon className="size-12 text-green-700"/>
+            <h1 className={"text-4xl text-center font-bold "}>
+              My <span style={highlightStyle}>Education</span>
+            </h1>
+          </div>
+        </div>
+
 
         <p style={quoteStyle}>
-          Education Is Not The Learning Of Facts, But The Training Of The Mind To Think.
+          Education is not the Learning of Facts, but the Training of the Mind to Think.
         </p>
 
         <div style={boxContainerStyle}>
@@ -97,7 +94,7 @@ const EducationSection = () => {
                   alt="Rajiv Gandhi Institute of Petroleum Technology"
                   width={250}
                   height={250}
-                  style={{ borderRadius: "8px", objectFit: "cover" }}
+                  style={{borderRadius: "8px", objectFit: "cover"}}
               />
             </div>
             <div>
@@ -116,7 +113,7 @@ const EducationSection = () => {
                   alt="Delhi Public School Ranchi - Intermediate"
                   width={250}
                   height={250}
-                  style={{ borderRadius: "8px", objectFit: "cover" }}
+                  style={{borderRadius: "8px", objectFit: "cover"}}
               />
             </div>
             <div>
@@ -135,7 +132,7 @@ const EducationSection = () => {
                   alt="Ramakrishna Mission Vidyapith - High School"
                   width={250}
                   height={350}
-                  style={{ borderRadius: "8px", objectFit: "cover" }}
+                  style={{borderRadius: "8px", objectFit: "cover"}}
               />
             </div>
             <div>
