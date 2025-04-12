@@ -15,27 +15,33 @@ const HeroSection = () => {
                     transition={{ duration: 0.5 }}
                     className="col-span-8 place-self-center text-center sm:text-left justify-self-start"
                 >
-                    <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-8xl lg:leading-normal font-extrabold">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m{" "}
+                    <h1 className="text-white mb-4 text-3xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-200 to-primary-600">
+              Hi, I&apos;m{" "}
             </span>
                         <br></br>
+                        <span
+                            className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-primary-600">
+                            Ravi Shekhar
+                        </span>
+                    </h1>
+                        <h1 className="text-2xl mb-4 text-white font-bold">
+                            I am into
                         <TypeAnimation
                             sequence={[
-                                "Ravi Shekhar",
+                                " Full Stack Web Developer",
                                 1000,
-                                "Web Developer",
+                                " Data Analyst",
                                 1000,
-                                "Data Analyst",
-                                1000,
-                                "Data Scientist",
+                                " Data Science",
                                 1000,
                             ]}
+                            className="text-primary-500"
                             wrapper="span"
                             speed={50}
                             repeat={Infinity}
                         />
-                    </h1>
+                        </h1>
                     <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
                         Computer Science and Engineering Undergraduate from Rajiv Gandhi Institute of Petroleum Technology <b>(An Institute of National Importance along the lines of IITs)</b>.
                     </p>

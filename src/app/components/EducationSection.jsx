@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import {AcademicCapIcon} from "@heroicons/react/24/outline";
+import {AcademicCapIcon} from "@heroicons/react/24/solid";
 
 const EducationSection = () => {
   const sectionStyle = {

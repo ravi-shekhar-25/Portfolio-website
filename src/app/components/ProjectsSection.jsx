@@ -2,7 +2,7 @@
 import React, {useRef} from "react";
 import ProjectCard from "./ProjectCard";
 import {motion, useInView} from "framer-motion";
-import {ComputerDesktopIcon} from "@heroicons/react/24/outline";
+import {ComputerDesktopIcon} from "@heroicons/react/24/solid";
 
 const projectsData = [
   {

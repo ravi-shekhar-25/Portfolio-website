@@ -2,7 +2,7 @@
 import React, {useState, useTransition} from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import {UserIcon} from "@heroicons/react/24/outline";
+import {UserIcon} from "@heroicons/react/24/solid";
 
 const TAB_DATA = [
     {
