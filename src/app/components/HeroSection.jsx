@@ -29,9 +29,9 @@ const HeroSection = () => {
                             I am into
                         <TypeAnimation
                             sequence={[
-                                " Full Stack Web Developer",
+                                " Full Stack Web Developement",
                                 1000,
-                                " Data Analyst",
+                                " Data Analysis",
                                 1000,
                                 " Data Science",
                                 1000,
