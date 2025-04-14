@@ -1,7 +1,7 @@
 import React from 'react';
 import {LightBulbIcon} from "@heroicons/react/24/solid";
 import Image from "next/image";
-import {Tooltip} from "@mui/material";
+import {Divider, Tooltip} from "@mui/material";
 
 const skillsData = [
     {
@@ -167,15 +167,25 @@ const skillsData = [
 const SkillsSection = () => {
     return (
         <section id="skills">
-            <div className="flex justify-center mb-8">
-                <div className="flex flex-row items-center gap-2">
-                    <LightBulbIcon className="size-10 text-yellow-700"/>
-                    <h1 className={"text-4xl text-center font-bold text-white "}>
-                        My <span>Skills</span>
-                    </h1>
+            <Divider
+                sx={{
+                    borderColor: "#33353F",
+                    '&::before, &::after': {
+                        borderColor: '#33353F',
+                    },
+                    my: 8,
+                }}
+            >
+                <div className="flex justify-center">
+                    <div className="flex flex-row items-center gap-2">
+                        <LightBulbIcon className="size-10 text-yellow-700"/>
+                        <h1 className={"text-4xl text-center font-bold text-white "}>
+                            My <span>Skills</span>
+                        </h1>
+                    </div>
                 </div>
-            </div>
-            <div className="grid grid-cols-6 items-center gap-4">
+            </Divider>
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center gap-4">
                 {skillsData.map((skill) => (
                     <div key={skill.id} className="shadow rounded-lg bg-white p-2 text-center">
                         <Tooltip title={skill.description} placement="top" followCursor={true} arrow={true}>

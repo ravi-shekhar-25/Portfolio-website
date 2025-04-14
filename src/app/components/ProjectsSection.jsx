@@ -3,6 +3,7 @@ import React, {useRef} from "react";
 import ProjectCard from "./ProjectCard";
 import {motion, useInView} from "framer-motion";
 import {ComputerDesktopIcon} from "@heroicons/react/24/solid";
+import {Divider} from "@mui/material";
 
 const projectsData = [
   {
@@ -59,14 +60,24 @@ const ProjectsSection = () => {
 
   return (
       <section id="projects">
-        <div className="w-full flex justify-center mt-8 mb-8 md:mb-12">
-          <div className="flex flex-row items-center gap-2">
-            <ComputerDesktopIcon className="size-10 text-blue-500"/>
-            <h2 className="text-center text-4xl font-bold text-white">
-              My Projects
-            </h2>
+        <Divider
+            sx={{
+              borderColor: "#33353F",
+              '&::before, &::after': {
+                borderColor: '#33353F',
+              },
+              my: 6,
+            }}
+        >
+          <div className="w-full flex justify-center">
+            <div className="flex flex-row items-center gap-2">
+              <ComputerDesktopIcon className="size-10 text-blue-500"/>
+              <h2 className="text-center text-4xl font-bold text-white">
+                My Projects
+              </h2>
+            </div>
           </div>
-        </div>
+        </Divider>
 
         {/*<div className="text-white flex flex-row justify-center items-center gap-2 py-4">*/}
         {/*  <ProjectTag*/}

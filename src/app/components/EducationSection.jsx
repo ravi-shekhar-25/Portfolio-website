@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import {AcademicCapIcon} from "@heroicons/react/24/solid";
+import {Divider} from "@mui/material";
 
 const EducationSection = () => {
   const sectionStyle = {
@@ -70,14 +71,24 @@ const EducationSection = () => {
 
   return (
       <section style={sectionStyle} id="education">
-        <div className="w-full flex justify-center mb-1">
-          <div className="flex flex-row items-center gap-2">
-            <AcademicCapIcon className="size-12 text-green-700"/>
-            <h1 className={"text-4xl text-center font-bold "}>
-              My <span style={highlightStyle}>Education</span>
-            </h1>
+        <Divider
+            sx={{
+              borderColor: "#33353F",
+              '&::before, &::after': {
+                borderColor: '#33353F',
+              },
+              my: 1,
+            }}
+        >
+          <div className="w-full flex justify-center mb-1">
+            <div className="flex flex-row items-center gap-2">
+              <AcademicCapIcon className="size-12 text-green-700"/>
+              <h1 className={"text-4xl text-center font-bold "}>
+                My <span style={highlightStyle}>Education</span>
+              </h1>
+            </div>
           </div>
-        </div>
+        </Divider>
 
 
         <p style={quoteStyle}>
