@@ -188,7 +188,9 @@ const SkillsSection = () => {
             <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center gap-4">
                 {skillsData.map((skill) => (
                     <div key={skill.id} className="shadow rounded-lg bg-white p-2 text-center">
-                        <Tooltip title={skill.description} placement="top" followCursor={true} arrow={true}>
+                        <Tooltip title={
+                            <span className="text-lg">{skill.description}</span>
+                        } placement="top" followCursor={false} arrow={true}>
                             <Image src={skill.image} alt={skill.title} width={60}
                                    height={60}
                                    className="mx-auto mb-2" />

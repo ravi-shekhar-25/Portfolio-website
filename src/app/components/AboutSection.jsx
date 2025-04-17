@@ -29,7 +29,8 @@ const AboutSection = () => {
 
             <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
                 <Image src="/images/aboutImage.png" alt="image" width={450} height={450}
-                       className={"rounded-2xl  shadow-lg shadow-warmGray-600 filter grayscale hover:grayscale-0 transition duration-500 cursor-pointer transform hover:scale-105"} />
+                       className={`rounded-2xl  shadow-lg shadow-warmGray-600 filter grayscale hover:grayscale-0 
+                       transition duration-500 cursor-pointer transform hover:scale-105`} />
 
                 <div className="mt-8 md:mt-0 text-left flex flex-col h-full">
                     <Typography variant="h4" className="text-primary-400">
