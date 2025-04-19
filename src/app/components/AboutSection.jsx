@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 import {UserIcon} from "@heroicons/react/24/solid";
 import {Divider, Typography} from "@mui/material";
-import {EnvelopeIcon, MapPinIcon} from "@heroicons/react/24/outline";
+import {EnvelopeIcon, MapPinIcon, PhoneIcon} from "@heroicons/react/24/outline";
+import Link from "next/link";
 
 const AboutSection = () => {
 
@@ -36,7 +37,7 @@ const AboutSection = () => {
                     <Typography variant="h4" className="text-primary-400">
                         I&apos;m Ravi Shekhar
                     </Typography>
-                    <br></br>
+                    <br/>
                     <Typography variant="body1" className="">
                         A full stack web developer with a passion for creating
                         interactive and responsive web applications. I have experience
@@ -45,11 +46,25 @@ const AboutSection = () => {
                         looking to expand my knowledge and skill set. I am a team player and
                         I am excited to work with others to create amazing applications.
                     </Typography>
-                    <br></br>
-                    <div className="flex flex-row items-center gap-1.5">
-                        <EnvelopeIcon className="size-5 text-blue-500"/>
-                        <span className="ml-1.5">ravishekharrkm@gmail.com</span>
-                    </div>
+                    <br/>
+                    <Link href={"tel:+919155227756"}
+                          className={"cursor-pointer hover:text-lime-400"}>
+                        <div className="flex flex-row items-center gap-1.5">
+                            <PhoneIcon className="size-5 text-lime-500"/>
+                            <span className="ml-1.5">
+                            +91-9155227756
+                        </span>
+                        </div>
+                    </Link>
+                    <Link href={"mailto:ravishekharrkm@gmail.com"}
+                          className={"cursor-pointer hover:underline hover:text-indigo-400"}>
+                        <div className="flex flex-row items-center mt-2 gap-1.5">
+                            <EnvelopeIcon className="size-5 text-blue-500"/>
+                            <span className="ml-1.5">
+                            ravishekharrkm@gmail.com
+                        </span>
+                        </div>
+                    </Link>
                     <div className="flex flex-row items-center mt-2 gap-1.5">
                         <MapPinIcon className="size-5 text-yellow-500"/>
                         <span className="ml-1.5">Muzaffarpur, Bihar, India</span>

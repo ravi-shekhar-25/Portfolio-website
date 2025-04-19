@@ -25,8 +25,8 @@ const HeroSection = () => {
                             Ravi Shekhar
                         </span>
                     </h1>
-                        <h1 className="text-2xl mb-4 text-white font-bold">
-                            I am into
+                    <h1 className="text-2xl mb-4 text-white font-bold">
+                        I am into
                         <TypeAnimation
                             sequence={[
                                 " Full Stack Web Developement",
@@ -41,7 +41,7 @@ const HeroSection = () => {
                             speed={50}
                             repeat={Infinity}
                         />
-                        </h1>
+                    </h1>
                     <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
                         Computer Science and Engineering Undergraduate from Rajiv Gandhi Institute of Petroleum Technology <b>(An Institute of National Importance along the lines of IITs)</b>.
                     </p>
@@ -78,16 +78,16 @@ const HeroSection = () => {
                 </motion.div>
             </div>
             <div className="px-4 py-7 socials flex flex-row gap-2">
-                <Link href="https://github.com/ravi-shekhar-25">
+                <Link href="https://github.com/ravi-shekhar-25" target="_blank">
                     <Image src="/assets/github.svg" alt="Github Icon" width={50} height={50} />
                 </Link>
-                <Link href="https://www.linkedin.com/in/ravi-shekhar25/">
+                <Link href="https://www.linkedin.com/in/ravi-shekhar25/" target="_blank">
                     <Image src="/assets/linkedin.svg" alt="Linkedin Icon" width={50} height={50} />
                 </Link>
-                <Link href="https://www.instagram.com/shekhar_025/">
+                <Link href="https://www.instagram.com/shekhar_025/" target="_blank">
                     <Image src="/assets/instagram.svg" alt="Instagram Icon" width={50} height={50} />
                 </Link>
-                <Link href="https://www.facebook.com/profile.php?id=100087018645883">
+                <Link href="https://www.facebook.com/profile.php?id=100087018645883" target="_blank">
                     <Image src="/assets/facebook.svg" alt="Facebook Icon" width={50} height={50} />
                 </Link>
             </div>

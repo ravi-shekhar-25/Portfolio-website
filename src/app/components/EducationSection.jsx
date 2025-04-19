@@ -90,7 +90,6 @@ const EducationSection = () => {
           </div>
         </Divider>
 
-
         <p style={quoteStyle}>
           Education is not the Learning of Facts, but the Training of the Mind to Think.
         </p>

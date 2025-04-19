@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 
-const EmailSection = () => {
+const ContactSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -14,8 +14,6 @@ const EmailSection = () => {
       email: e.target.email.value,
       message: e.target.message.value,
     };
-    const JSONData = JSON.stringify(data);
-    const endpoint = "/api/send";
 
     const response = await fetch("/api/send", {
       method: "POST",
@@ -37,9 +35,10 @@ const EmailSection = () => {
           id="contact"
           className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
       >
-        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-60 w-60 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2">
+        <div className={`bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] 
+        from-primary-900 to-transparent rounded-full h-60 w-60 z-0
+         blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2`}/>
 
-        </div>
         <div className="z-10">
           <h5 className="text-xl font-bold text-white my-2">
             Let&apos;s Connect
@@ -51,19 +50,19 @@ const EmailSection = () => {
             try my best to get back to you!
           </p>
           <div className="socials flex flex-row gap-2">
-            <Link href="https://github.com/ravi-shekhar-25 ">
+            <Link href="https://github.com/ravi-shekhar-25" target="_blank">
               <Image src="/assets/github.svg" alt="Github Icon" width={40} height={40} />
             </Link>
-            <Link href="https://www.linkedin.com/in/ravi-shekhar25/">
+            <Link href="https://www.linkedin.com/in/ravi-shekhar25/" target="_blank">
               <Image src="/assets/linkedin.svg" alt="Linkedin Icon" width={40} height={40}/>
             </Link>
-            <Link href="https://www.instagram.com/shekhar_025/">
+            <Link href="https://www.instagram.com/shekhar_025/" target="_blank">
               <Image src="/assets/instagram.svg" alt="Facebook Icon" width={40} height={40} />
             </Link>
-            <Link href="https://www.facebook.com/profile.php?id=100087018645883">
+            <Link href="https://www.facebook.com/profile.php?id=100087018645883" target="_blank">
               <Image src="/assets/facebook.svg" alt="Facebook Icon" width={40} height={40} />
             </Link>
-            <Link href="https://twitter.com/RaviShekhar_025">
+            <Link href="https://twitter.com/RaviShekhar_025" target="_blank">
               <Image src="/assets/twitter.svg" alt="Twitter Icon" width={40} height={40} />
             </Link>
           </div>
@@ -134,4 +133,4 @@ const EmailSection = () => {
   );
 };
 
-export default EmailSection;
+export default ContactSection;
