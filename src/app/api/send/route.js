@@ -15,16 +15,28 @@ export async function POST(req) {
             },
         });
 
-        // Email details
-        const mailOptions = {
-            from: email, // Sender (user who filled the form)
+        // Email to yourself
+        const mailToSelf = {
+            from: email,
             to: process.env.TO_EMAIL, // Your email
-            subject: `New Contact Form Submission: ${name}`,
-            text: `You received a new message from ${email}.\n\nMessage:\n${message}`,
+            subject: `Portfolio Website Form Submission: ${name}`,
+            text: `You received a new message from ${email}.\n\nName: ${name}\nEmail: ${email}\nMessage: ${message}`,
+        };
+
+        // Email back to the user
+        const mailToUser = {
+            from: process.env.FROM_EMAIL,
+            to: email, // 👈 Send to the email they filled
+            subject: `Thanks for contacting me, ${name}!`,
+            text: `Hi ${name},\n\nThanks for reaching out! Here’s a copy of your message:\n\n"${message}"\n\nI'll get back to you soon!\n\nBest Wishes,\nRavi Shekhar`,
         };
 
         // Send email
-        await transporter.sendMail(mailOptions);
+        await Promise.all([
+            transporter.sendMail(mailToSelf),
+            transporter.sendMail(mailToUser),
+        ]);
+
 
         return new Response(JSON.stringify({ success: true, message: "Email sent!" }), { status: 200 });
     } catch (error) {
