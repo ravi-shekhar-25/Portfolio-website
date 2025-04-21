@@ -3,19 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import {AcademicCapIcon} from "@heroicons/react/24/solid";
-import {Divider} from "@mui/material";
+import {Divider, Typography} from "@mui/material";
 
 const EducationSection = () => {
-  const sectionStyle = {
-    backgroundColor: "#121212", // Light blue background color for the section
-    color: "#ffffff", // Dark text color
-    padding: "2rem",
-    textAlign: "center"
-  };
-
-  const highlightStyle = {
-    color: "#a741f7" // Purple highlight color for "Education" word
-  };
 
   const quoteStyle = {
     fontSize: "1.1rem",
@@ -31,32 +21,6 @@ const EducationSection = () => {
     gap: "1.5rem"
   };
 
-  const boxStyle = {
-    backgroundColor: "#ffffff", // White background for boxes
-    borderRadius: "12px",
-    padding: "1rem",
-    display: "flex",
-    alignItems: "center",
-    width: "90%",
-    maxWidth: "1000px",
-    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
-    overflow: "hidden",
-    textAlign: "left"
-  };
-
-  const imageStyle = {
-    flexShrink: 0,
-    marginRight: "1rem",
-    borderRadius: "8px"
-  };
-
-  const contentTitleStyle = {
-    color: "#1c2a8a", // Dark blue title color
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-    marginBottom: "0.5rem"
-  };
-
   const contentSubtitleStyle = {
     color: "#777777", // Gray subtitle color
     fontSize: "1rem",
@@ -70,7 +34,7 @@ const EducationSection = () => {
   };
 
   return (
-      <section style={sectionStyle} id="education">
+      <section id="education" className="text-white text-center">
         <Divider
             sx={{
               borderColor: "#33353F",
@@ -84,7 +48,7 @@ const EducationSection = () => {
             <div className="flex flex-row items-center gap-2">
               <AcademicCapIcon className="size-12 text-green-700"/>
               <h1 className={"text-4xl text-center font-bold "}>
-                My <span style={highlightStyle}>Education</span>
+                My <span className="text-[#a741f7]">Education</span>
               </h1>
             </div>
           </div>
@@ -96,57 +60,67 @@ const EducationSection = () => {
 
         <div style={boxContainerStyle}>
           {/* Education Item 1 */}
-          <div style={boxStyle}>
-            <div style={imageStyle}>
+          <div className={`flex flex-col md:flex-row md:gap-3 items-center text-left md:w-[90%] max-w-[1000px] bg-white rounded-lg`}>
+            <div className="relative w-full max-w-[400px] md:w-[300px] h-[150px]">
               <Image
-                  priority
-                  src="/images/rgipt.jpeg"
+                  fill
+                  src="/images/college.jpg"
                   alt="Rajiv Gandhi Institute of Petroleum Technology"
-                  width={250}
-                  height={250}
-                  style={{borderRadius: "8px", objectFit: "cover"}}
+                  className= "object-cover"
               />
             </div>
-            <div>
-              <h3 style={contentTitleStyle}>B.Tech In Computer Science And Engineering</h3>
-              <p style={contentSubtitleStyle}>Rajiv Gandhi Institute Of Petroleum Technology</p>
+            <div className="p-3">
+              <Typography component="h3"
+                          sx={{color: "#1c2a8a",
+                            fontSize: "1.5rem",
+                            fontWeight: "bold",
+                            marginBottom: "0.5rem"}}>
+                B.Tech In Computer Science & Engineering
+              </Typography>
+              <p style={contentSubtitleStyle}>Rajiv Gandhi Institute of Petroleum Technology</p>
               <p style={contentDateStyle}>2022-2026 | Pursuing</p>
             </div>
           </div>
 
           {/* Education Item 2 */}
-          <div style={boxStyle}>
-            <div style={imageStyle}>
+          <div className={`flex flex-col md:flex-row md:gap-3 items-center text-left md:w-[90%] max-w-[1000px] bg-white rounded-lg`}>
+            <div className="relative w-full max-w-[400px] md:w-[300px] h-[150px]">
               <Image
-                  priority
+                  fill
                   src="/images/sen-sec-school.jpg"
-                  alt="Delhi Public School Ranchi - Intermediate"
-                  width={250}
-                  height={250}
-                  style={{borderRadius: "8px", objectFit: "cover"}}
+                  alt="Ramakrishna Mission Vidyapith- Intermediate"
+                  className={"relative object-cover"}
               />
             </div>
-            <div>
-              <h3 style={contentTitleStyle}>Intermediate | 93.6%</h3>
+            <div className="p-3">
+              <Typography component="h3"  sx={{color: "#1c2a8a",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "0.5rem"}}>
+                Intermediate | 93.6%
+              </Typography>
               <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
               <p style={contentDateStyle}>2020-2022 | Completed</p>
             </div>
           </div>
 
           {/* Education Item 3 */}
-          <div style={boxStyle}>
-            <div style={imageStyle}>
+          <div className={`flex flex-col md:flex-row md:gap-3 items-center text-left md:w-[90%] max-w-[1000px] bg-white rounded-lg`}>
+            <div className="relative w-full max-w-[400px] md:w-[300px] h-[150px]">
               <Image
-                  priority
+                  fill
                   src="/images/sec-school.jpg"
                   alt="Ramakrishna Mission Vidyapith - High School"
-                  width={250}
-                  height={350}
-                  style={{borderRadius: "8px", objectFit: "cover"}}
+                  className="object-cover"
               />
             </div>
-            <div>
-              <h3 style={contentTitleStyle}>High School | 97.2%</h3>
+            <div className="p-3">
+              <Typography component="h3"  sx={{color: "#1c2a8a",
+                fontSize: "1.5rem",
+                fontWeight: "bold",
+                marginBottom: "0.5rem"}}>
+                High School | 97.2%
+              </Typography>
               <p style={contentSubtitleStyle}>Ramakrishna Mission Vidyapith Deoghar | CBSE</p>
               <p style={contentDateStyle}>2018-2020 | Completed</p>
             </div>
