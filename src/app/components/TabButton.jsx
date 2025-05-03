@@ -2,11 +2,11 @@ import React from "react";
 import {motion} from "framer-motion";
 
 const variants = {
-    default: { width: 0 },
-    active: { width: "calc(100% - 0.75rem)" },
+    default: {width: 0},
+    active: {width: "calc(100% - 0.75rem)"},
 };
 
-const TabButton = ({ active, selectTab, children }) => {
+const TabButton = ({active, selectTab, children}) => {
     const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
 
     return (

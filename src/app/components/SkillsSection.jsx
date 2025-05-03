@@ -163,7 +163,6 @@ const skillsData = [
 
 ]
 
-
 const SkillsSection = () => {
     return (
         <section id="skills">
@@ -185,7 +184,7 @@ const SkillsSection = () => {
                     </div>
                 </div>
             </Divider>
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-center gap-4">
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 items-start gap-4">
                 {skillsData.map((skill) => (
                     <div key={skill.id} className="shadow rounded-lg bg-white p-2 text-center">
                         <Tooltip title={
@@ -193,7 +192,7 @@ const SkillsSection = () => {
                         } placement="top" followCursor={false} arrow={true}>
                             <Image src={skill.image} alt={skill.title} width={60}
                                    height={60}
-                                   className="mx-auto mb-2" />
+                                   className="mx-auto mb-2"/>
                             <p className={"font-semibold"}>{skill.title}</p>
                         </Tooltip>
                     </div>
