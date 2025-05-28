@@ -125,6 +125,12 @@ const skillsData = [
         image: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
     },
     {
+        id: 27,
+        title: "Android Studio",
+        description: "Android Studio",
+        image: "https://img.icons8.com/color/48/000000/android-studio.png",
+    },
+    {
         id: 20,
         title: "Material UI",
         description: "Material UI",
