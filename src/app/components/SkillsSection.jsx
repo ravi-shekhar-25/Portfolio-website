@@ -199,7 +199,7 @@ const SkillsSection = () => {
                             <Image src={skill.image} alt={skill.title} width={60}
                                    height={60}
                                    className="mx-auto mb-2"/>
-                            <p className={"font-semibold"}>{skill.title}</p>
+                            <p className={"font-semibold text-black"}>{skill.title}</p>
                         </Tooltip>
                     </div>
 
